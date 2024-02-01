@@ -1,0 +1,12 @@
+// babel.config.js
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "usage",
+                "corejs": "3.34.0"
+            }
+        ]
+    ]
+}

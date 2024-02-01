@@ -1,0 +1,63 @@
+{
+  "name": "ado_bulk_clone",
+  "version": "1.0.0",
+  "description": "A command-line (cli) utility to help clone all Azure DevOps (ADO) git repositories.",
+  "main": "index.js",
+  "type": "module",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "ES2020"
+    ],
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "target": "ES2020"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "debug": "node src/index.js --organization CooperTireAndRubberCompany",
+    "build": "node_modules/.bin/babel src --out-dir bin"
+  },
+  "mocha": {
+    "exit": true,
+    "color": true,
+    "require": [
+      "@babel/register"
+    ],
+    "mochaExplorer.files": "test/**/*.ts",
+    "mochaExplorer.require": "@babel/register",
+    "ignore": "node_modules"
+  },
+  "keywords": [
+    "Azure",
+    "cli",
+    "cloning"
+  ],
+  "author": "Paul Stoner",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "core-js": "^3.34.0",
+    "node-fetch": "^3.3.2",
+    "ora": "^7.0.1",
+    "prompts": "^2.4.2",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/register": "^7.22.15",
+    "@faker-js/faker": "^8.3.1",
+    "@types/chai": "^4.3.11",
+    "@types/faker": "^6.6.9",
+    "chai": "^4.3.10",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.55.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.1"
+  }
+}
